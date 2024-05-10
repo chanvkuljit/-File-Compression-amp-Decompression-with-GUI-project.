@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.filecompressor.FileCompressorController">
+   <children>
+      <Pane prefHeight="55.0" prefWidth="600.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="55.0" prefWidth="600.0" style="-fx-background-color: #09dcab; -fx-border-radius: 10%;" text="Welcome To File Compressor">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="85.0" prefHeight="99.0" prefWidth="600.0">
+         <children>
+            <TextField fx:id="openFilePathField" layoutX="77.0" layoutY="33.0" onInputMethodTextChanged="#getSrcFilePath" prefHeight="34.0" prefWidth="324.0" promptText="Enter Your File Path Here" />
+            <Button layoutX="426.0" layoutY="33.0" mnemonicParsing="false" onAction="#onOpenFile" prefHeight="34.0" prefWidth="106.0" style="-fx-background-color: #09dcab;" text="Browse" textFill="#151515" />
+            <Label fx:id="enterSource" contentDisplay="CENTER" layoutX="77.0" layoutY="1.0" prefHeight="27.0" prefWidth="206.0" text="Enter Source" textAlignment="CENTER" textFill="#09dcab">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="infoText11" contentDisplay="CENTER" layoutX="77.0" layoutY="79.0" prefHeight="27.0" prefWidth="206.0" text="Enter Destination" textAlignment="CENTER" textFill="#09dcab">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="53.0" layoutY="314.0" prefHeight="64.0" prefWidth="494.0">
+         <children>
+            <Button layoutX="28.0" layoutY="15.0" mnemonicParsing="false" onAction="#onCompress" prefHeight="34.0" prefWidth="120.0" style="-fx-background-color: #09dcab;" text="Compress" />
+            <Button layoutX="360.0" layoutY="15.0" mnemonicParsing="false" onAction="#onDecompress" prefHeight="34.0" prefWidth="120.0" style="-fx-background-color: #09dcab;" text="Decompress" />
+         </children>
+      </Pane>
+      <Label fx:id="infoText" alignment="CENTER" contentDisplay="CENTER" layoutX="79.0" layoutY="266.0" prefHeight="27.0" prefWidth="456.0" text="Please Select A File And Perform The operations" textAlignment="CENTER" textFill="#09dcab">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Pane fx:id="enterDestination" layoutY="184.0" prefHeight="55.0" prefWidth="590.0">
+         <children>
+            <TextField fx:id="saveFilePathField" layoutX="77.0" layoutY="11.0" onInputMethodTextChanged="#getSrcFilePath" prefHeight="34.0" prefWidth="324.0" promptText="Enter Saving File Path" />
+            <Button layoutX="426.0" layoutY="11.0" mnemonicParsing="false" onAction="#onSaveFileBtn" prefHeight="34.0" prefWidth="106.0" style="-fx-background-color: #09dcab;" text="Browse" textFill="#151515" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
